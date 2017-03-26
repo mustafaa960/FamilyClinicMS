@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="style/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modreniraq.cdms.controllers.LoginController">
+   <center>
+      <Pane fx:id="paneLogin" prefHeight="287.0" prefWidth="508.0" style="-fx-background-color: #e3f2fd;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="60.0" left="50.0" right="50.0" top="60.0" />
+         </BorderPane.margin>
+         <children>
+            <JFXTextField fx:id="txtUsername" focusColor="#164ef8" labelFloat="true" layoutX="45.0" layoutY="75.0" maxWidth="400.0" minWidth="300.0" prefHeight="45.0" prefWidth="400.0" promptText="Username">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+               
+            </JFXTextField>
+            <JFXPasswordField fx:id="txtPassword" focusColor="#164ef8" labelFloat="true" layoutX="45.0" layoutY="162.0" maxWidth="400.0" minWidth="300.0" prefHeight="45.0" prefWidth="400.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
+            </JFXPasswordField>
+            <Label fx:id="labLogin" layoutX="212.0" layoutY="3.0" prefHeight="45.0" prefWidth="81.0" text="Login " textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.8952380952380952" endY="0.45238095238095233" startX="0.17142857142857143" startY="0.32857142857142857">
+                     <stops>
+                        <Stop color="#2926cd" />
+                        <Stop color="#4ea6c9" offset="0.14488288501797214" />
+                        <Stop color="#48d4ff" offset="0.8320101117825968" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <padding>
+                  <Insets bottom="5.0" left="4.0" right="4.0" top="5.0" />
+               </padding>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#6f6262" height="6.17" radius="3.3275" spread="0.29" width="9.14" />
+               </effect>
+            </Label>
+            <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="345.0" layoutY="226.0" onAction="#Login" prefHeight="40.0" prefWidth="100.0" ripplerFill="WHITE" text="Login" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#1b1919" height="14.34" radius="6.855" width="15.08" />
+         </effect>
+      </Pane>
+   </center>
+</BorderPane>

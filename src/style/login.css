@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+#border{
+    -fx-background-image:url("../images/LoginBG.jpg");
+   
+/*    -fx-background-color: #ff3333;*/
+    
+}
+#btnLogin{
+    -fx-background-color: #3333ff;
+}
+#paneLogin{
+    -fx-background-color:#90caf9; 
+}
+

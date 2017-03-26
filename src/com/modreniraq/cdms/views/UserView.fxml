@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderUser" style="-fx-background-color: #ffffff;" stylesheets="style/userview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modreniraq.cdms.controllers.UserViewController">
+    <left>
+        <VBox alignment="TOP_CENTER" prefHeight="528.0" prefWidth="263.0" spacing="30.0" style="-fx-border-color: #39768f; -fx-border-radius: 5; -fx-border-width: 2;" BorderPane.alignment="TOP_CENTER">
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="2.0" right="2.0" top="5.0" />
+            </BorderPane.margin>
+            <children>
+                <JFXTextField fx:id="txtID" focusColor="#39778f" labelFloat="true" promptText="ID" unFocusColor="#4d4a4a">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets top="1.0" />
+                    </padding>
+                </JFXTextField>
+                <JFXTextField fx:id="txtUsername" focusColor="#39778f" labelFloat="true" promptText="Username">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets top="1.0" />
+                    </padding>
+                </JFXTextField>
+                <JFXPasswordField fx:id="txtPassword" focusColor="#39778f" labelFloat="true" promptText="Password">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+               
+                </JFXPasswordField>
+                <JFXComboBox id="comboUserType" fx:id="comboUserType" prefHeight="100.0" prefWidth="239.0" promptText="User Type"> 
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="admin" />
+                            <String fx:value="doctor" />
+                            <String fx:value="nurse" />
+                            <String fx:value="reception" />
+                        </FXCollections>
+                    </items>
+            
+                </JFXComboBox>
+                <JFXTextField fx:id="txtFirstName" focusColor="#39778f" labelFloat="true" maxWidth="239.0" minWidth="239.0" prefHeight="37.0" prefWidth="239.0" promptText="First Name">
+                    <padding>
+                        <Insets top="1.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtFatherName" focusColor="#39778f" labelFloat="true" promptText="Father Name">
+                    <padding>
+                        <Insets top="1.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtMobile" focusColor="#39778f" labelFloat="true" promptText="Mobile">
+               
+                    <padding>
+                        <Insets top="1.0" />
+                    </padding>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </JFXTextField>
+                <JFXComboBox fx:id="comboSpecialization" prefHeight="100.0" prefWidth="239.0" promptText="Specialization">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="general" />
+                            <String fx:value="family" />
+                        </FXCollections>
+                    </items>
+            
+            
+                </JFXComboBox>
+                <HBox alignment="CENTER" prefHeight="136.0" prefWidth="239.0" spacing="5.0">
+                    <children>
+                        <JFXButton buttonType="RAISED" onAction="#onAdd" ripplerFill="WHITE" style="-fx-background-color: #39778f;" text="Add" textFill="#fffdfd" />
+                        <JFXButton buttonType="RAISED" onAction="#onEdit" prefHeight="20.0" prefWidth="37.0" ripplerFill="WHITE" style="-fx-background-color: #39778f;" text="Edit" textFill="#fcfcfc" />
+                        <JFXButton buttonType="RAISED" onAction="#onDelete" ripplerFill="WHITE" style="-fx-background-color: #39778f;" text="Delete" textFill="#fffbfb" />
+                        <JFXButton buttonType="RAISED" ripplerFill="WHITE" style="-fx-background-color: #39778f;" text="Clear" textFill="#fcfafa" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" top="25.0" />
+            </padding>
+        </VBox>
+    </left>
+    <center>
+        <TableView id="TableUsers" fx:id="TableUsers" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn id="ColId" fx:id="colID" prefWidth="53.0" text="ID" />
+                <TableColumn id="colUserName" fx:id="colUsername" prefWidth="97.0" text="Usename" />
+                <TableColumn id="colPassword" fx:id="colPassword" prefWidth="98.0" text="Password" />
+                <TableColumn id="colUserType" fx:id="colUserType" prefWidth="70.0" text="User Type" />
+                <TableColumn id="colFirstName" fx:id="colFirstName" prefWidth="73.0" text="First Name" />
+                <TableColumn id="colFatherName" fx:id="colFatherName" prefWidth="84.0" text="Father Name" />
+                <TableColumn id="colMobile" fx:id="colMobile" text="Mobile" />
+                <TableColumn id="colSpecialization" fx:id="colSpecialization" prefWidth="100.0" text="Specialization" />
+            </columns>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+            </BorderPane.margin>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        
+       
+        </TableView>
+    </center>
+    <top>
+        <HBox alignment="CENTER_LEFT" focusTraversable="true" style="-fx-background-color: #26a69a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+            <effect>
+                <BoxBlur height="0.0" width="0.0" />
+            </effect>
+            <children>
+                <Label prefHeight="27.0" prefWidth="242.0" text="User Registration" textFill="WHITE">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="18.04" spread="0.2" width="23.96" />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtSearch" focusColor="WHITE" labelFloat="true" maxWidth="628.0" minWidth="353.0" prefColumnCount="30" prefHeight="48.0" prefWidth="353.0" promptText="Search">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" right="30.0" top="25.0" />
+                    </padding>
+                </JFXTextField>
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="19.0" prefWidth="935.0" style="-fx-background-color: #26a69a;" BorderPane.alignment="CENTER">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#464545" height="15.07" radius="7.035" spread="0.21" width="15.07" />
+            </effect>
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </HBox>
+    </bottom>
+</BorderPane>

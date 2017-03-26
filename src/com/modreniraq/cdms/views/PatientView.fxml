@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.*?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderUser" prefHeight="682.0" prefWidth="935.0" style="-fx-background-color: #ffffff;" stylesheets="style/patientview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modreniraq.cdms.controllers.PatientViewController">
+    <top>
+        <HBox alignment="CENTER_LEFT" focusTraversable="true" spacing="5.0" style="-fx-background-color: #26a69a; -fx-border-width: 2px; -fx-border-radius: 10; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+            <effect>
+                <BoxBlur height="0.0" width="0.0" />
+            </effect>
+            <children>
+                <Label prefHeight="27.0" prefWidth="185.0" text="Patient Information" textFill="WHITE">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" height="18.04" spread="0.2" width="23.96" />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtSearchPatient" focusColor="WHITE" labelFloat="true" maxWidth="628.0" minWidth="353.0" prefColumnCount="30" prefHeight="48.0" prefWidth="432.0" promptText="Search">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <padding>
+                        <Insets left="20.0" right="30.0" top="25.0" />
+                    </padding>
+                </JFXTextField>
+            <JFXButton fx:id="btnAddPatient" buttonType="RAISED" prefHeight="25.0" prefWidth="60.0" ripplerFill="#fffefe" style="-fx-background-color: #b71c1c;" text="Add" textFill="WHITE" />
+            <JFXButton fx:id="btnEditPatient" buttonType="RAISED" prefHeight="25.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #b71c1c;" text="Edit" textFill="WHITE" />
+            <JFXButton fx:id="btnDeletePatient" buttonType="RAISED" prefHeight="25.0" prefWidth="60.0" ripplerFill="WHITE" style="-fx-background-color: #b71c1c;" text="Delete" textFill="WHITE" />
+            </children>
+        </HBox>
+    </top>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="19.0" prefWidth="935.0" style="-fx-background-color: #26a69a;" BorderPane.alignment="CENTER">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#464545" height="15.07" radius="7.035" spread="0.21" width="15.07" />
+            </effect>
+            <padding>
+                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+            </padding>
+        </HBox>
+    </bottom>
+    <center>
+        <VBox prefHeight="594.0" prefWidth="935.0" spacing="2.0">
+            <children>
+                <TableView fx:id="tableViewPatientInfo" editable="true" prefHeight="337.0" prefWidth="935.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="colId" sortable="false" text="ID" />
+                        <TableColumn fx:id="colName" prefWidth="199.0" sortable="false" text="Name" />
+                        <TableColumn fx:id="colAge" minWidth="9.0" prefWidth="88.0" sortable="false" text="Age" />
+                        <TableColumn fx:id="colBloodGroup" minWidth="2.0" prefWidth="87.0" sortable="false" text="Blood Group" />
+                        <TableColumn fx:id="colGender" prefWidth="82.0" sortable="false" text="Gender" />
+                        <TableColumn fx:id="colCity" prefWidth="122.0" sortable="false" text="City" />
+                        <TableColumn fx:id="colPhone" prefWidth="159.0" sortable="false" text="Phone" />
+                  <TableColumn fx:id="colReference" prefWidth="116.0" text="Reference" />
+                    </columns>
+                    <BorderPane.margin>
+                        <Insets top="5.0" />
+                    </BorderPane.margin>
+               
+                </TableView>
+                <TableView fx:id="tableViewPatientVisit" editable="true" layoutX="8.0" layoutY="8.0" prefHeight="267.0" prefWidth="935.0" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="6.0">
+                    <columns>
+                        <TableColumn fx:id="colVisitID" prefWidth="145.0" text="Visit ID" />
+                        <TableColumn fx:id="colVisitNum" minWidth="0.0" prefWidth="122.0" text="Visit number" />
+                        <TableColumn fx:id="colVisitDate" minWidth="0.0" prefWidth="262.0" text="Visit Date" />
+                    </columns>
+                </TableView>
+            </children>
+            <BorderPane.margin>
+                <Insets top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>

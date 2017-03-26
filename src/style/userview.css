@@ -1,0 +1,38 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+#borderUser{
+    -fx-background-color:  #ffffff;
+}
+#lbl{
+    
+     -fx-background-image: url("../images/close1.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-cursor: hand;
+}
+#lbl:hover{
+    -fx-background-color: none;
+    -fx-background-image: url("../images/close2.jpg");
+}
+TableUsers{
+    -fx-border-color:#39778f;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+     -fx-border-width : 2;
+}
+#colSpecialization,#colMobile,#colFatherName,#colFirstName,#colUserType,#colPassword,#colUserName,#ColId{
+    -fx-background-radius: 10;
+   /* -fx-font: cursive;*/
+   -fx-text-alignment: center;
+}
+#comboUserType:pressed{
+    
+}
+
+

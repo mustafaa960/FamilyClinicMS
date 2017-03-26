@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane fx:id="stackPaneWelcome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modreniraq.cdms.controllers.WelcomeViewController">
+   <children>
+      <ImageView fitHeight="368.0" fitWidth="559.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/welcome.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="160.0" layoutY="194.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Family Clinic Management System" wrappingWidth="230.802734375">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <ProgressBar layoutX="14.0" layoutY="327.0" prefHeight="18.0" prefWidth="212.0" />
+            <Text fill="WHITE" layoutX="120.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" wrappingWidth="201.4072265625">
+               <font>
+                  <Font name="System Bold" size="46.0" />
+               </font>
+            </Text>
+            <Text layoutX="386.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by MiQ Team 2017" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

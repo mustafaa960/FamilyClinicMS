@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.jfx-hamburger StackPane{
+    -fx-background-color:  #39768f;
+}

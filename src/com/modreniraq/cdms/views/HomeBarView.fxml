@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBoxBar" prefWidth="145.0" stylesheets="style/homebarview.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.modreniraq.cdms.controllers.HomeBarViewController">
+   <children>
+      <ImageView fitHeight="115.0" fitWidth="144.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../images/home.png" />
+         </image>
+         <VBox.margin>
+            <Insets left="15.0" right="15.0" />
+         </VBox.margin>
+      </ImageView>
+      <JFXButton id="userView" fx:id="btnUserView" buttonType="RAISED" prefHeight="60.0" prefWidth="145.0" ripplerFill="#ee2f09" text="Users">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btn2" buttonType="RAISED" prefHeight="60.0" prefWidth="145.0" ripplerFill="#ee2f09" text="2" />
+      <JFXButton fx:id="btn3" buttonType="RAISED" prefHeight="60.0" prefWidth="145.0" ripplerFill="#ee2f09" text="3" />
+      <JFXButton fx:id="btn4" buttonType="RAISED" prefHeight="60.0" prefWidth="145.0" ripplerFill="#ee2f09" text="4" />
+      <JFXButton fx:id="btn5" buttonType="RAISED" prefHeight="60.0" prefWidth="145.0" ripplerFill="#ee2f09" text="5">
+         
+      </JFXButton>
+   </children>
+</VBox>
